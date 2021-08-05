@@ -4,7 +4,7 @@ class Footer extends Component {
     render(){
         return (
             <div className="App-footer">
-                Footer
+                Reportex 2021 ©
             </div>
         )
     }

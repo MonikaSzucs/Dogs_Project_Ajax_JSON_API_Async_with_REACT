@@ -30,6 +30,8 @@ html, body {
   background-color: yellow;
   position: fixed;
   bottom: 0; 
-  padding: 10px 0px;
+  padding: 5px 0px;
   width: 100%;
+  text-align: center;
+  font-size: 10px;
 }
