@@ -9,8 +9,6 @@ function DogList(){
   return (
     <section className="booklist">
       <Book />
-      <Book/>
-      <Book/>
     </section>
   );
 }
@@ -28,6 +26,6 @@ const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/5
 
 const Title = () => <h1>TITLE HERE</h1>
 
-const Author = () => <h4>Author</h4>
+const Author = () => <h4 style={{color:'#617d98', fontSize: '0.75rem', marginTop:'0.25rem'}}>Author</h4>
 
 ReactDOM.render(<DogList/>, document.getElementById('root'));
