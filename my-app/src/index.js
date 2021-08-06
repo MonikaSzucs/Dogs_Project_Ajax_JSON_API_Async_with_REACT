@@ -5,15 +5,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-const author= 'Author';
-const title = 'title here';
-const img = 'https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg';
+const firstBook = {
+  img:'https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg',
+  title: 'Where\'s Spot?',
+  author: 'Eric Hill'
+}
+const secondBook = {
+  img:'https://images-na.ssl-images-amazon.com/images/I/517h-u1AQlL._AC_SX184_.jpg',
+  title: 'I Love You to the Moon and Back',
+  author: 'Amelia Hepworth, Tim Warnes'
+}
+
 
 function DogList(){
   return (
     <section className="booklist">
-      <Book job="developer"/>
-      <Book title="random title" number={22}/>
+      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author}/>
+      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author}/>
     </section>
   );
 }
@@ -23,12 +31,9 @@ const Book = (props) => {
   console.log(props);
   return (
     <article className="book">
-      <img src={img} alt=""/>
-      <h1>{title.replace(/\b(\w)/g, s => s.toUpperCase())}</h1>
-      <h4>{author.toUpperCase()}</h4>
-      <p>{props.job}</p>
-      <p>{props.title}</p>
-      <p>{props.number}</p>
+      <img src={props.img} alt=""/>
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
     </article>
   )
 }
