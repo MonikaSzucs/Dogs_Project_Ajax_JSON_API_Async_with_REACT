@@ -26,6 +26,9 @@ const Book = (props) => {
       <img src={img} alt=""/>
       <h1>{title.replace(/\b(\w)/g, s => s.toUpperCase())}</h1>
       <h4>{author.toUpperCase()}</h4>
+      <p>{props.job}</p>
+      <p>{props.title}</p>
+      <p>{props.number}</p>
     </article>
   )
 }
