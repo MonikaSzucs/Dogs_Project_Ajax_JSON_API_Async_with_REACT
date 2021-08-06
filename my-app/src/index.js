@@ -4,15 +4,23 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-function Greeting(){
+function DogList(){
   return (
-    <div>
-      <Person/>
-      <p>This is my message.</p>
-    </div>
+    <section>
+      <Book/>
+      <Book/>
+      <Book/>
+      <Image/>
+    </section>
   );
 }
 
-const Person = () => <h2>John Doe</h2>
+const Book = () => {
+  return <article>
+    this is a car
+  </article>
+}
+const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg" alt=""/>
 
-ReactDOM.render(<Greeting/>, document.getElementById('root'));
+
+ReactDOM.render(<DogList/>, document.getElementById('root'));
