@@ -13,19 +13,19 @@ function DogList(){
   );
 }
 
+const author= 'Author'
+
 const Book = () => {
+  const title = 'TITLE HEREee'
   return (
     <article className="book">
-        <Image/>
-        <Title/>
-        <Author/>
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg" alt=""/>
+      <h1>{title}</h1>
+      <h4>{author}</h4>
+      {/* <p>{let x=6}</p> */}
+      <p>{6+6}</p>
     </article>
   )
 }
-const Image = () => <img src="https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg" alt=""/>
-
-const Title = () => <h1>TITLE HERE</h1>
-
-const Author = () => <h4 style={{color:'#617d98', fontSize: '0.75rem', marginTop:'0.25rem'}}>Author</h4>
 
 ReactDOM.render(<DogList/>, document.getElementById('root'));
