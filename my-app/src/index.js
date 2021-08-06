@@ -5,25 +5,27 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const author= 'Author';
+const title = 'title here';
+const img = 'https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg';
+
 function DogList(){
   return (
     <section className="booklist">
-      <Book />
+      <Book job="developer"/>
+      <Book title="random title" number={22}/>
     </section>
   );
 }
 
-const author= 'Author'
-
-const Book = () => {
-  const title = 'TITLE HEREee'
+// there are parameters and arguments in a function like Books
+const Book = (props) => {
+  console.log(props);
   return (
     <article className="book">
-      <img src="https://images-na.ssl-images-amazon.com/images/I/51o4b5AdNLL._AC_SX184_.jpg" alt=""/>
-      <h1>{title}</h1>
-      <h4>{author}</h4>
-      {/* <p>{let x=6}</p> */}
-      <p>{6+6}</p>
+      <img src={img} alt=""/>
+      <h1>{title.replace(/\b(\w)/g, s => s.toUpperCase())}</h1>
+      <h4>{author.toUpperCase()}</h4>
     </article>
   )
 }
